@@ -87,7 +87,7 @@ class http_wrapper extends stream_wrapper_base
      */
     public function stream_read(int $count)
     {
-        print "count is $count";
+        //print "count is $count";
         $chunk = parent::stream_read($count);
         self::record_operation('bytes', $this->path, strlen($chunk));
         return $chunk;
